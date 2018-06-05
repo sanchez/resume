@@ -1,0 +1,164 @@
+% !TeX spellcheck = en_US
+\documentclass[a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage[margin=20mm]{geometry}
+\usepackage{ragged2e}
+\usepackage{calc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+\usepackage[default]{sourcesanspro}
+
+% Coloring
+\definecolor{orange}{HTML}{FF6138}
+\definecolor{black}{HTML}{000000}
+\newcommand{\primary}{\color{orange}}
+\newcommand{\black}{\color{black}}
+
+\linespread{1.3}
+\setlength\parindent{0pt}
+
+\newcommand{\vrulefill}[1]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+\renewcommand{\headrulewidth}{0.15em}
+\renewcommand{\footrulewidth}{0.15em}
+\renewcommand{\headrule}{\hbox to\headwidth{\black\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\black\leaders\hrule height \footrulewidth\hfill}}
+
+\newcommand{\heading}[1]{
+	\vspace{0em}\noindent\makebox[\linewidth]{
+		\Large\raggedright\bf#1\hspace{0.5em}\vrulefill{0.9pt}
+	}\vspace{0em}
+}
+\newcommand{\datedheading}[2]{
+	\noindent\makebox[\linewidth]{\large\scshape\raggedright#1\hfill\primary#2}
+}
+\newenvironment{header}[1]{
+	\noindent\begin{minipage}[t]{\linewidth}\heading{#1}
+}{
+	\end{minipage}
+}
+
+\newenvironment{listed}[1]{
+	\large\raggedright\textbf{#1}\hspace{0.5em}\vrulefill{0.9pt}\vspace{-1em}\begin{multicols}{3}\begin{itemize}[nolistsep]
+}{
+	\end{itemize}\end{multicols}\vspace{-1em}
+}
+\newenvironment{infolist}[1]{
+	\begin{minipage}[t]{\linewidth}\textbf{\underline{#1}}
+		\begin{description}
+			[align=parleft,leftmargin=4.5cm,style=sameline,labelwidth=!,topsep=0pt,itemsep=0ex,partopsep=1ex,parsep=1ex]
+}{
+		\end{description}
+	\end{minipage}
+}
+
+\begin{document}
+	
+\begin{minipage}{\linewidth}
+	\raggedleft\Huge{ Daniel \primary\textbf{Fitzmaurice}}\\
+	\black\large Email:\ \primary\textbf{dfitz360@gmail.com}\\
+	\black\large Website:\ \primary\textbf{sanchez.github.io}\\
+	\black\large GitHub:\ \primary\textbf{github.com/sanchez}\\
+	\black\large Phone:\ \primary\textbf{0498119849}
+	\black\vspace{1.5em}
+\end{minipage}
+\pagestyle{fancy}\fancyhf{}
+\lhead{}\chead{}\rhead{}
+\lfoot{Daniel \primary\textbf{Fitzmaurice}}\cfoot{}\rfoot{Page \thepage}
+\pagenumbering{arabic}
+
+Currently Fourth Year Software Engineer at University of Queensland, I am an active member of UQ Computing Socienty. Living on campus at Emmanuel College, I contribute to college life by being a Residential Assistant.\\
+
+\begin{listed}{Technical Skills}
+	\item JavaScript/Typescript
+	\item C/C++
+	\item NeoVIM
+	\item HTML/CSS/SASS
+	\item Ubuntu Linux
+	\item LaTeX
+	\item Git/Svn
+	\item AVR/Arduino
+	\item FreeRTOS
+	\item Java
+	\item Python 3
+	\item React/React Native
+\end{listed}
+
+\begin{header}{Education}
+	\datedheading{University of Queensland}{2015 -- Now}
+	\datedheading{St Patrick's College Mackay}{2013 -- 2014}
+	\begin{infolist}{Academic Achievements}
+		\item[Rats of Tobruk] Awarded for outstanding dedication to the college community
+		\item[Adrian Carl Smith Memorial Award] Awarded for demonstrating outstanding integrity, a friendly nature and a great passion for Information Technology, Aerospace and Business
+	\end{infolist}
+\end{header}
+
+\begin{header}{Certifications and Training}
+	\datedheading{CPR}{February 2018}
+	\datedheading{First Aid}{February 2016}
+	\datedheading{Mental Health First Aid}{April 2017}
+	\datedheading{Fire Safety}{February 2017}
+	\datedheading{Blue Card}{2015 -- 2018}
+\end{header}
+
+\vspace{-1em}
+
+\begin{header}{Volunteer Placements}
+	\datedheading{St Patrick's College Lighting and Sound}{February -- November 2014}
+	\datedheading{Robocup Junior Queensland Championship}{August 2015, 2016, 2017}
+	\datedheading{Emmanuel College's Annual Musical}{August 2015, 2016, 2017}
+	\datedheading{Emmanuel College's Information Technology Support}{February 2016 -- December 2016}
+	\datedheading{Emmanuel International Rugby 7s Media Director IT}{May -- September 2016}
+	\datedheading{Emmanuel College Ambassador Program}{July 2016}
+	\datedheading{Emmanuel College Residential Assistant}{February 2017 -- Now}
+\end{header}
+
+\heading{Work Experience Placement}
+	\datedheading{CQ Manufacturing Christmas Lights}{November, December 2011 -- 2017}
+	\begin{flushleft}
+		Assisted and developed synchronized lighting and sound effects for a major Christmas light display which resulted massive crowds and numerous features on news mediums.
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Multi-node Network] Connected different nodes over a singular network which relayed back to a control device
+		\item[Network Configuration] Investigated and evaluated a range and mix of different network configurations and setups
+		\item[Video Editing] Since 2015, the lighting setup has used a projector to project a video up to the projector. This projector also played video in sync with the music
+		\item[Special Effects Creation] Video production included programming special effects which coincided with musical elements
+	\end{infolist}
+
+\begin{header}{Employment History}
+	\datedheading{Studio Pierrot Website}{August 2014 -- October 2014}
+	\begin{flushleft}
+		Team member in a group project, to design and create a website for a local drama studio (Studio Pierrot).
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Team Management] Worked in a team of two which maintained professional communication with the client
+		\item[Team Communication] Maintained direct communication with fellow developer to ensure seamless integration
+		\item[Time Management] Checkpoints were created to ensure all project tasks were created on time and quality expectation
+		\item[User Design] Studio Pierrot used a unique style of design, the first experience of constructing a site using parallax scrolling
+	\end{infolist}\\\\
+
+	\datedheading{GroupCCTV Trailer Management System}{November 2014 -- December 2014}
+	\begin{flushleft}
+		Assisted in the final stages of development and implementation of a remote CCTV trailer management system.
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Data Communication] Collaborated and researched methods for transmitting a set of data across a network system
+		\item[Data Manipulation] Investigated designs for sending data for the idea way of sending data through reduction of processing and transmission
+		\item[Quick Adjustment] Assimilated quickly into project development which was partly underway.
+	\end{infolist}\\\\
+
+	\datedheading{Pizza Hut}{December 2011 -- September}
+	\begin{flushleft}
+		Completed a wide range of tasks. Specialized in customer service and cutting/boxing pizzas.
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Customer Service] Supplied customer service at counter. Assisting the customer with all enquiries
+		\item[Problem Solving] Assisted with problem solving by quickly generating easy-to-implement resolutions
+		\item[Customer Management] Assisted in diffusing situations that arose
+		\item[Teamwork and Communication] Acquired an understanding of teamwork through communication to a range of people with different roles
+	\end{infolist}
+\end{header}
+	
+\end{document}

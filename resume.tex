@@ -32,10 +32,21 @@
 	}\vspace{0em}
 }
 \newcommand{\datedheading}[2]{
-	\noindent\makebox[\linewidth]{\large\scshape\raggedright#1\hfill\primary#2}
+	\begin{minipage}{\linewidth}
+%		\vspace{1.5em}
+		\noindent\makebox[\linewidth]{\large\scshape\raggedright#1\hfill\primary#2}
+	\end{minipage}
 }
 \newenvironment{header}[1]{
 	\noindent\begin{minipage}[t]{\linewidth}\heading{#1}
+}{
+	\end{minipage}
+}
+\newenvironment{datedheader}[2]{
+	\noindent\begin{minipage}{\linewidth}
+		\vspace{2.5em}
+		\datedheading{#1}{#2}
+		\vspace{-2em}
 }{
 	\end{minipage}
 }
@@ -69,7 +80,7 @@
 \lfoot{Daniel \primary\textbf{Fitzmaurice}}\cfoot{}\rfoot{Page \thepage}
 \pagenumbering{arabic}
 
-Currently Fourth Year Software Engineer at University of Queensland, I am an active member of UQ Computing Socienty. Living on campus at Emmanuel College, I contribute to college life by being a Residential Assistant.
+Currently Fourth Year Software Engineer at University of Queensland, I am an active member of UQ Computing Socienty. Living on campus at Emmanuel College, I contribute to college life by being a Residential Assistant. Currently looking for work over the Christmas break and hoping to continue through past the break.
 
 \begin{listed}{Technical Skills}
 	\item JavaScript/Typescript
@@ -119,7 +130,8 @@ Currently Fourth Year Software Engineer at University of Queensland, I am an act
 	\datedheading{Emmanuel College Residential Assistant}{February 2017 -- Now}
 \end{header}
 
-\heading{Work Experience Placement}
+\begin{minipage}{\linewidth}
+	\heading{Work Experience Placement}
 	\datedheading{CQ Manufacturing Christmas Lights}{November, December 2011 -- 2017}
 	\begin{flushleft}
 		Assisted and developed synchronized lighting and sound effects for a major Christmas light display which resulted massive crowds and numerous features on news mediums.
@@ -130,9 +142,13 @@ Currently Fourth Year Software Engineer at University of Queensland, I am an act
 		\item[Video Editing] Since 2015, the lighting setup has used a projector to project a video up to the projector. This projector also played video in sync with the music
 		\item[Special Effects Creation] Video production included programming special effects which coincided with musical elements
 	\end{infolist}
+\end{minipage}
 
-\begin{header}{Employment History}
-	\datedheading{Studio Pierrot Website}{August 2014 -- October 2014}
+\vspace{2em}
+
+\heading{Employment History}
+\datedheading{Studio Pierrot Website}{August 2014 -- October 2014}
+	\vspace{-2.5em}
 	\begin{flushleft}
 		Team member in a group project, to design and create a website for a local drama studio (Studio Pierrot).
 	\end{flushleft}
@@ -141,9 +157,9 @@ Currently Fourth Year Software Engineer at University of Queensland, I am an act
 		%\item[Team Communication] Maintained direct communication with fellow developer to ensure seamless integration
 		\item[Time Management] Checkpoints were created to ensure all project tasks were created on time and quality expectation
 		\item[User Design] Studio Pierrot used a unique style of design, the first experience of constructing a site using parallax scrolling
-	\end{infolist}\\\\
+	\end{infolist}
 
-	\datedheading{GroupCCTV Trailer Management System}{November 2014 -- December 2014}
+\begin{datedheader}{GroupCCTV Trailer Management System}{November 2014 -- December 2014}
 	\begin{flushleft}
 		Assisted in the final stages of development and implementation of a remote CCTV trailer management system.
 	\end{flushleft}
@@ -151,9 +167,10 @@ Currently Fourth Year Software Engineer at University of Queensland, I am an act
 		\item[Data Communication] Collaborated and researched methods for transmitting a set of data across a network system
 		\item[Data Manipulation] Investigated designs for sending data for the idea way of sending data through reduction of processing and transmission
 		\item[Quick Adjustment] Assimilated quickly into project development which was partly underway.
-	\end{infolist}\\\\
+	\end{infolist}
+\end{datedheader}
 
-	\datedheading{Pizza Hut}{December 2011 -- September 2014}
+\begin{datedheader}{Pizza Hut}{December 2011 -- September 2014}
 	\begin{flushleft}
 		Completed a wide range of tasks. Specialized in customer service and cutting/boxing pizzas.
 	\end{flushleft}
@@ -162,9 +179,10 @@ Currently Fourth Year Software Engineer at University of Queensland, I am an act
 		\item[Problem Solving] Assisted with problem solving by quickly generating easy-to-implement resolutions
 		%\item[Customer Management] Assisted in diffusing situations that arose
 		%\item[Teamwork and Communication] Acquired an understanding of teamwork through communication to a range of people with different roles
-	\end{infolist}\\\\
+	\end{infolist}
+\end{datedheader}
 	
-	\datedheading{Tyeware}{July, December 2017, January 2018}
+\begin{datedheader}{Tyeware}{July, December 2017, January 2018}
 	\begin{flushleft}
 		Worked on bug fixes and feature request for currently deployed project, as well as development on unreleased projects
 	\end{flushleft}
@@ -173,6 +191,38 @@ Currently Fourth Year Software Engineer at University of Queensland, I am an act
 		\item[Team Management] Interacted with team using issue tracking and Slack
 		\item[Built to Spec] Had to build features and test them according to the provided spec
 	\end{infolist}
-\end{header}
+\end{datedheader}
+
+\begin{datedheader}{Australian Association for Information Systems}{June 2018 -- Now}
+	\begin{flushleft}
+		Worked on converting an existing website to a new theme using Wordpress and added a membership payment system.
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Client Communication] Used email threads for a majority of the communication with the client
+		\item[Agile Development] Features are developing incrementally and independently of each other
+	\end{infolist}
+\end{datedheader}
+
+\begin{datedheader}{Macadamia Nuts Trading}{August 2018 -- Now}
+	\begin{flushleft}
+		Create a system for buying and selling Macadamia Nuts using distributed technology and the Ethereum blockchain.
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Blockchain Development] Using the blockchain to store and modify data and make sure it is all secured correctly
+		\item[Issue Tracking] All development features and issues are tracked using Github's Issue tracking features
+	\end{infolist}
+\end{datedheader}
+
+\begin{datedheader}{University of Queensland Tutoring}{August 2018 -- Now}
+	\begin{flushleft}
+		Tutoring Operating Systems Architecture at University of Queensland
+	\end{flushleft}
+	\begin{infolist}{Skills and Contributions:}
+		\item[Student Assistance and Guidance] If a student has a question or problem with the content of the course, it is my role to direct the students towards the answer. But make sure to not just give them the answer
+		\item[Quick Solving] Ability to look at a students solution and work out where their error is and hint the student towards resources that will help
+	\end{infolist}
+\end{datedheader}
+
+%\end{header}
 	
 \end{document}

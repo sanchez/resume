@@ -1,0 +1,57 @@
+% !TeX spellcheck = en_US
+\documentclass[a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage[margin=20mm]{geometry}
+\usepackage{ragged2e}
+\usepackage{calc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[none]{hyphenat}
+\usepackage{multicol}
+\usepackage[default]{sourcesanspro}
+
+% Coloring
+\definecolor{orange}{HTML}{FF6138}
+\definecolor{black}{HTML}{000000}
+\newcommand{\primary}{\color{orange}}
+\newcommand{\black}{\color{black}}
+
+\linespread{1.3}
+\setlength\parindent{0pt}
+
+\newcommand{\vrulefill}[1]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+\renewcommand{\headrulewidth}{0.15em}
+\renewcommand{\footrulewidth}{0.15em}
+\renewcommand{\headrule}{\hbox to\headwidth{\black\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\black\leaders\hrule height \footrulewidth\hfill}}
+
+\begin{document}
+	\begin{minipage}{\linewidth}
+		\raggedleft\Huge{ Daniel \primary\textbf{Fitzmaurice}}\\
+		\black\large Email:\ \primary\textbf{dfitz360@gmail.com}\\
+		\black\large Website:\ \primary\textbf{sanchez.github.io}\\
+		\black\large GitHub:\ \primary\textbf{github.com/sanchez}\\
+		\black\large Phone:\ \primary\textbf{0498119849}
+		\black\vspace{0em}
+	\end{minipage}
+	\pagestyle{fancy}\fancyhf{}
+	\lhead{}\chead{}\rhead{}
+	\lfoot{Daniel \primary\textbf{Fitzmaurice}}\cfoot{}\rfoot{Page \thepage}
+	\pagenumbering{arabic}
+	
+	% Greeting: Address your cover letter to the proper person
+	% Opening: Write a personable, inviting opening paragraph that notes how your skills are a perfect fit to the job and displays your enthusiasm
+	% Hook: Highlight your past achievements as they relate to the job you're applying for
+	% Skills: Emphasize additional relevant skills, such as computer languages or certifications
+	% Close: Briefly recap your strengths as a candidate, and include your contact information
+	
+	Dear James Stone,\\
+	
+	Being given the chance to work as apart of the Console Group team would be an outstanding pleasure and experience. I enjoy being challenged and being able to learn from those challenges to become a more efficient and smarter programmer. I have experience with RESTful APIs through my work on my superthesis project, building a webapp (and a phoneapp) for a smarthome ecosystem. Through my superthesis project I have also gained experience using NoSQL databases (in particular RethinkDB), and through my experiences at Tyeware I also have experience using SQL. I have experience with Typescript, React, and SASS through my superthesis project.\\
+	
+	Thank you for your time and I look forward to hearing a response,\\
+	Daniel
+	
+	
+\end{document}
